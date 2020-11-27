@@ -17,10 +17,7 @@ public class TypeCombiningTokenFilterFactory extends TokenFilterFactory {
      */
     public TypeCombiningTokenFilterFactory(Map<String, String> args) {
         super(args);
-        while (args.containsKey("type")) {
-            String type = args.remove("type");
-            types.add(type);
-        }
+        types.addAll(args.keySet());
     }
 
     @Override
