@@ -1,4 +1,4 @@
-package com.bti360.lucene;
+package com.github.robbypond.lucene;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.ClassicTokenizer;

@@ -1,6 +1,5 @@
-package com.gmail360.lucene;
+package com.github.robbypond.lucene;
 
-import com.bti360.lucene.TypeCombiningTokenFilterFactory;
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.miscellaneous.WordDelimiterGraphFilterFactory;
