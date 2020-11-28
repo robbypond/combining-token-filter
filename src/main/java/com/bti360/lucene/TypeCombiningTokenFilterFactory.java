@@ -1,9 +1,11 @@
 package com.bti360.lucene;
 
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.standard.ClassicTokenizer;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +19,9 @@ public class TypeCombiningTokenFilterFactory extends TokenFilterFactory {
      */
     public TypeCombiningTokenFilterFactory(Map<String, String> args) {
         super(args);
-        types.addAll(args.keySet());
+        if (getInt(args, "concatenateEmailParts", 1) != 0) {
+            types.add(ClassicTokenizer.TOKEN_TYPES[ClassicTokenizer.EMAIL]);
+        }
     }
 
     @Override
